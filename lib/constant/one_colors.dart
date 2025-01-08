@@ -25,6 +25,7 @@ class OneColors {
   static const Color textFlag2 = Color(0xFF2b58a7);
   static const Color textGuide = Color(0xFFAFBCCB);
   static const Color buttonBlue = Color(0xFF234B8E);
+  static const Color kScreenBackgroundColor = Color(0xFFF6FBFF);
 
   //Brand Colors
   static const Color brandVNP = Color(0xFF00A2E5);

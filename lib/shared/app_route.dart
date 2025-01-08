@@ -1,6 +1,7 @@
 // ignore_for_file: constant_identifier_names
 
 import 'package:basegetxbloc/shared/page_material_route.dart';
+import 'package:basegetxbloc/ui/home_page/home_page.dart';
 import 'package:basegetxbloc/ui/login/login_screen.dart';
 import 'package:basegetxbloc/ui/splash/splash_screen.dart';
 import 'package:flutter/material.dart';
@@ -9,6 +10,7 @@ import 'package:get/get.dart';
 enum AppRoute {
   SPALSH_SCREEN,
   LOGIN_SCREEN,
+  HOME_PAGE,
 }
 
 extension AppRouteExt on AppRoute {
@@ -18,6 +20,8 @@ extension AppRouteExt on AppRoute {
         return '/splash';
       case AppRoute.LOGIN_SCREEN:
         return '/login_screen';
+      case AppRoute.HOME_PAGE:
+        return '/home_page';
     }
   }
 
@@ -43,6 +47,13 @@ extension AppRouteExt on AppRoute {
         return PageMaterialRoute(
           settings: settings,
           page: () => const LoginScreen(),
+          bindings: [],
+          transition: Transition.fade,
+        );
+      case AppRoute.HOME_PAGE:
+        return PageMaterialRoute(
+          settings: settings,
+          page: () => const HomePage(),
           bindings: [],
           transition: Transition.fade,
         );

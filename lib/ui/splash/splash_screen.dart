@@ -108,7 +108,7 @@ class _SplashScreenState extends State<SplashScreen> {
                   right: 6,
                   child: InkWell(
                     onTap: () {
-                      Get.offAllNamed(AppRoute.LOGIN_SCREEN.name);
+                      Get.offAllNamed(AppRoute.HOME_PAGE.name);
                     },
                     child: Container(
                       padding: const EdgeInsets.all(14),

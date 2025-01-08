@@ -1,3 +1,5 @@
+// ignore_for_file: library_private_types_in_public_api
+
 import 'dart:async';
 
 import 'package:basegetxbloc/component/textfield/shake_widget.dart';
@@ -168,7 +170,7 @@ class _OneTextFieldState extends State<OneTextField> with TickerProviderStateMix
       case OneTextFieldStyle.border:
         return OutlineInputBorder(
           borderSide: BorderSide(color: widget.borderColor ?? OneColors.textGrey1.withOpacity(0.5)),
-          borderRadius: new BorderRadius.circular(22.0),
+          borderRadius: BorderRadius.circular(22.0),
         );
     }
   }
@@ -190,7 +192,7 @@ class _OneTextFieldState extends State<OneTextField> with TickerProviderStateMix
       case OneTextFieldStyle.border:
         return OutlineInputBorder(
           borderSide: BorderSide(color: widget.borderColor ?? OneColors.textGrey1.withOpacity(0.5)),
-          borderRadius: new BorderRadius.circular(22.0),
+          borderRadius: BorderRadius.circular(22.0),
         );
     }
   }
@@ -212,7 +214,7 @@ class _OneTextFieldState extends State<OneTextField> with TickerProviderStateMix
       case OneTextFieldStyle.border:
         return OutlineInputBorder(
           borderSide: BorderSide(color: widget.readOnly ? OneColors.textGrey1.withOpacity(0.5) : OneColors.brandVNPT),
-          borderRadius: new BorderRadius.circular(22.0),
+          borderRadius: BorderRadius.circular(22.0),
         );
     }
   }
@@ -234,7 +236,7 @@ class _OneTextFieldState extends State<OneTextField> with TickerProviderStateMix
       case OneTextFieldStyle.border:
         return OutlineInputBorder(
           borderSide: BorderSide(color: widget.borderColor ?? OneColors.error),
-          borderRadius: new BorderRadius.circular(22.0),
+          borderRadius: BorderRadius.circular(22.0),
         );
     }
   }
@@ -256,7 +258,7 @@ class _OneTextFieldState extends State<OneTextField> with TickerProviderStateMix
       case OneTextFieldStyle.border:
         return OutlineInputBorder(
           borderSide: BorderSide(color: widget.borderColor ?? OneColors.error),
-          borderRadius: new BorderRadius.circular(22.0),
+          borderRadius: BorderRadius.circular(22.0),
         );
     }
   }
@@ -440,7 +442,7 @@ class _OneTextFieldState extends State<OneTextField> with TickerProviderStateMix
       maxLines: widget.maxLines,
       minLines: widget.minLines,
       onTap: widget.onTap,
-      scrollPadding: EdgeInsets.only(bottom: 100),
+      scrollPadding: const EdgeInsets.only(bottom: 100),
       enableInteractiveSelection: widget.enableInteractiveSelection,
       autofillHints: widget.autofillHints,
       decoration: InputDecoration(
@@ -481,7 +483,7 @@ class _OneTextFieldState extends State<OneTextField> with TickerProviderStateMix
   Widget _buildSuffix() {
     final suffixIcon = widget.suffixIconAssetPath != null
         ? Padding(
-            padding: (widget.style == OneTextFieldStyle.none || widget.style == OneTextFieldStyle.underline) ? EdgeInsets.all(0) : EdgeInsets.all(6),
+            padding: (widget.style == OneTextFieldStyle.none || widget.style == OneTextFieldStyle.underline) ? const EdgeInsets.all(0) : const EdgeInsets.all(6),
             child: SizedBox(
               height: hasError ? 19 : null,
               width: hasError ? 19 : null,
@@ -546,7 +548,7 @@ class _OneTextFieldState extends State<OneTextField> with TickerProviderStateMix
         Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            SizedBox(width: 5),
+            const SizedBox(width: 5),
             _prefixIcon,
           ],
         ),
