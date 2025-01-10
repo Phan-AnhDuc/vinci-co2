@@ -16,43 +16,98 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   int _selectedIndex = 1;
+  int _tabIndex = 1;
   final ValueNotifier<bool> _isShowTravel = ValueNotifier<bool>(true);
 
   List<String> iconGridView = [OneIcons.ic_location, OneIcons.ic_car_blue, OneIcons.ic_statistical, OneIcons.ic_foot];
   List<String> titleGridView = ['Mes voyages', 'Mon garage', 'Mes statistiques de mobilité', 'Mon activité physique'];
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment(0.3, 1.5),
-            end: Alignment(0.2, -1.4),
-            colors: [
-              OneColors.white,
-              Color(0xFF82BDF2),
-            ],
+    return SafeArea(
+      child: Scaffold(
+        body: Container(
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment(0.3, 1.5),
+              end: Alignment(0.2, -1.4),
+              colors: [
+                OneColors.white,
+                Color(0xFF82BDF2),
+              ],
+            ),
           ),
-        ),
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 14),
           child: CustomScrollView(
             physics: const BouncingScrollPhysics(),
             slivers: [
+              SliverAppBar(
+                pinned: true,
+                backgroundColor: OneColors.white,
+                elevation: 0,
+                flexibleSpace: Padding(
+                  padding: const EdgeInsets.only(left: 20, top: 8, bottom: 8, right: 20),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Row(
+                        children: [
+                          MaterialButton(
+                            elevation: 0,
+                            focusElevation: 0,
+                            color: _tabIndex == 1 ? OneColors.buttonBlue : null,
+                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(100)),
+                            onPressed: () {
+                              setState(() {
+                                _tabIndex = 1;
+                              });
+                            },
+                            child:
+                                Text('Empreinte carbone', style: OneTheme.of(context).s14w7TextGreyDark.copyWith(color: _tabIndex == 1 ? OneColors.white : OneColors.buttonBlue)),
+                          ),
+                          const SizedBox(width: 10),
+                          MaterialButton(
+                            elevation: 0,
+                            focusElevation: 0,
+                            color: _tabIndex == 2 ? OneColors.buttonBlue : null,
+                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(100)),
+                            onPressed: () {
+                              setState(() {
+                                _tabIndex = 2;
+                              });
+                            },
+                            child: Text('Eco Score', style: OneTheme.of(context).s14w7TextGreyDark.copyWith(color: _tabIndex == 2 ? OneColors.white : OneColors.buttonBlue)),
+                          ),
+                        ],
+                      ),
+                      Container(
+                        padding: const EdgeInsets.all(6),
+                        decoration: BoxDecoration(shape: BoxShape.circle, border: Border.all(width: 1, color: OneColors.textFlag2)),
+                        child: SvgPicture.asset(OneIcons.ic_calendar_current),
+                      )
+                    ],
+                  ),
+                ),
+                toolbarHeight: 60,
+              ),
               SliverToBoxAdapter(
-                child: Column(
-                  children: [
-                    const SizedBox(height: 50),
-                    _buildTotalCacbonAndAverage(),
-                    _buildStatistiques(),
-                    _buildWorkSchedule(),
-                    const SizedBox(height: 16),
-                    _buidBanner(),
-                    const SizedBox(height: 16),
-                  ],
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 14),
+                  child: Column(
+                    children: [
+                      const SizedBox(height: 20),
+                      _buildTotalCacbonAndAverage(),
+                      _buildStatistiques(),
+                      _buildWorkSchedule(),
+                      const SizedBox(height: 16),
+                      _buidBanner(),
+                      const SizedBox(height: 16),
+                    ],
+                  ),
                 ),
               ),
-              _buildGridView(),
+              SliverPadding(
+                padding: const EdgeInsets.symmetric(horizontal: 14),
+                sliver: _buildGridView(),
+              ),
               const SliverToBoxAdapter(child: SizedBox(height: 50)),
             ],
           ),
@@ -168,7 +223,6 @@ class _HomeScreenState extends State<HomeScreen> {
 
   Widget _buildItemIcon({required int index, Function? callBack, required String icons}) {
     final bool isSelected = _selectedIndex == index;
-
     return InkWell(
       onTap: () {
         setState(() {
