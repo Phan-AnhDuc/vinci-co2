@@ -8,33 +8,50 @@ class ItemGridView extends StatelessWidget {
     super.key,
     required this.icon,
     required this.title,
+    this.heightIcon = 32,
+    this.widthIcon = 32,
+    this.width,
+    this.height,
+    required this.onTap,
   });
 
   final String icon;
   final String title;
+  final double? widthIcon;
+  final double? heightIcon;
+  final double? width;
+  final double? height;
+  final Function onTap;
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(color: OneColors.white, borderRadius: BorderRadius.circular(15)),
-      padding: const EdgeInsets.all(16),
-      child: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            SvgPicture.asset(
-              icon,
-              height: 32,
-              width: 32,
-            ),
-            const SizedBox(height: 12),
-            Text(
-              title,
-              style: OneTheme.of(context).s16w6GreyBlur.copyWith(color: OneColors.buttonBlue),
-              textAlign: TextAlign.center,
-            ),
-          ],
+    return InkWell(
+      onTap: () {
+        onTap.call();
+      },
+      child: Container(
+        height: width,
+        width: height,
+        decoration: BoxDecoration(color: OneColors.white, borderRadius: BorderRadius.circular(15)),
+        padding: const EdgeInsets.all(16),
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              SvgPicture.asset(
+                icon,
+                height: widthIcon,
+                width: heightIcon,
+              ),
+              const SizedBox(height: 12),
+              Text(
+                title,
+                style: OneTheme.of(context).s16w6GreyBlur.copyWith(color: OneColors.buttonBlue),
+                textAlign: TextAlign.center,
+              ),
+            ],
+          ),
         ),
       ),
     );

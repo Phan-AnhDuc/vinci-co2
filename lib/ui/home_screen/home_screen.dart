@@ -42,7 +42,6 @@ class _HomeScreenState extends State<HomeScreen> {
               SliverAppBar(
                 pinned: true,
                 backgroundColor: OneColors.white,
-                elevation: 0,
                 flexibleSpace: Padding(
                   padding: const EdgeInsets.only(left: 20, top: 8, bottom: 8, right: 20),
                   child: Row(
@@ -337,7 +336,11 @@ class _HomeScreenState extends State<HomeScreen> {
     return SliverGrid(
       delegate: SliverChildBuilderDelegate(
         (BuildContext context, int index) {
-          return ItemGridView(icon: iconGridView[index], title: titleGridView[index]);
+          return ItemGridView(
+            icon: iconGridView[index],
+            title: titleGridView[index],
+            onTap: () {},
+          );
         },
         childCount: 4,
       ),
