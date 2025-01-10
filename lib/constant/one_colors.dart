@@ -40,8 +40,8 @@ class OneColors {
   static const Color redLight = Color(0xFFEF4444);
   static const Color primaryDarkBlue = Color(0xFF0961B6);
   static const Color primaryLightBlue = Color(0xFF2686E0);
-  static const Color greenBlur = Color(0xFFD4F9EC);
-  static const Color greenLight = Color(0xFFD4F6FF);
+  static const Color greenBlur = Color(0xFFD4F6FF);
+  static const Color greenLight = Color(0xFF0BA87B);
   static const Color greenSteel = Color(0xFF19C285);
   static const Color yellowSteel = Color(0xFFFF9E2B);
   static const Color greenNavy = Color(0xFF21C8B4);

@@ -251,7 +251,7 @@ class _HomeScreenState extends State<HomeScreen> {
           startTime: '10:44',
           vehicle: OneIcons.ic_car,
           vehicleName: 'Voiture',
-          colorBackground: OneColors.greenLight,
+          colorBackground: OneColors.greenBlur,
         ),
         SizedBox(height: 16),
         ItemWorkSchedule(
