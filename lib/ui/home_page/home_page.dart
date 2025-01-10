@@ -1,6 +1,8 @@
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 import 'package:basegetxbloc/constant/one_colors.dart';
 import 'package:basegetxbloc/constant/one_icons.dart';
+import 'package:basegetxbloc/constant/one_theme.dart';
+import 'package:basegetxbloc/ui/home_screen/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -30,16 +32,18 @@ class _HomePageState extends State<HomePage> {
 
   final List<String> titles = ["Home", "Schedule", "Carbon Chart", "Profile"];
 
+  final List<Widget> screens = [
+    const HomeScreen(),
+    const SizedBox(),
+    const SizedBox(),
+    const SizedBox(),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: OneColors.kScreenBackgroundColor,
-      body: Center(
-        child: Text(
-          'Selected Tab: ${titles[_currentIndex]}',
-          style: TextStyle(fontSize: 20),
-        ),
-      ),
+      body: screens[_currentIndex],
       floatingActionButton: FloatingActionButton(
         shape: const CircleBorder(),
         backgroundColor: OneColors.buttonBlue,
@@ -73,10 +77,7 @@ class _HomePageState extends State<HomePage> {
               const SizedBox(height: 4),
               Text(
                 titles[index],
-                style: TextStyle(
-                  color: OneColors.buttonBlue,
-                  fontSize: 12,
-                ),
+                style: OneTheme.of(context).s12w5Primary,
               ),
             ],
           );

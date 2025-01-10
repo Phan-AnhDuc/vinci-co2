@@ -9,4 +9,5 @@ class OneImages {
   static const String img_succes = 'packages/one_assets/lib/images/ic_success.png';
   static const String img_failure = 'packages/one_assets/lib/images/ic_failure.png';
   static const String img_login = 'assets/images/img_login.png';
+  static const String img_banner = 'assets/images/img_banner.png';
 }

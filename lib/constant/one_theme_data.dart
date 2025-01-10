@@ -26,6 +26,7 @@ class OneThemeData with Diagnosticable {
 
   late TextStyle s12w4GreyDark;
   late TextStyle s12w4GreyBlur;
+  late TextStyle s12w5Primary;
   late TextStyle s12w4White;
   late TextStyle s12w4SteelGrey;
   late TextStyle s12w6TextGrey2;
@@ -87,6 +88,7 @@ class OneThemeData with Diagnosticable {
   late TextStyle textFieldErrorDisabled;
   late TextStyle s12w4SteelGreyItalic;
   late TextStyle s19w6greyBlur;
+  late TextStyle s24w7primary;
 
   // Builds the Custom Themes, based on the currently defined based Themes
   // ignore: avoid_unused_constructor_parameters
@@ -95,7 +97,7 @@ class OneThemeData with Diagnosticable {
     final OneThemeData theme = OneThemeData();
 
     theme.header = const TextStyle(
-      fontFamily: 'OLInter',
+      fontFamily: 'MGManrope',
       fontWeight: FontWeight.w700,
       fontStyle: FontStyle.normal,
       fontSize: 20.0,
@@ -246,6 +248,12 @@ class OneThemeData with Diagnosticable {
 
     /// fontSize: 19; fontWeight: 600; color: greyBlur
     theme.s19w6greyBlur = theme.body1.copyWith(fontSize: 19, fontWeight: FontWeight.w600, color: OneColors.greyBlur);
+
+    /// fontSize: 12; fontWeight: w500; color: buttonBlue
+    theme.s12w5Primary = theme.body1.copyWith(fontSize: 12, fontWeight: FontWeight.w500, color: OneColors.buttonBlue);
+
+    /// fontSize: 24; fontWeight: w700; color: buttonBlue
+    theme.s24w7primary = theme.body1.copyWith(fontSize: 24, fontWeight: FontWeight.w700, color: OneColors.buttonBlue);
 
     theme.textLink = theme.header.copyWith(
       fontWeight: FontWeight.w600,
@@ -403,5 +411,6 @@ class OneThemeData with Diagnosticable {
         textFieldErrorDisabled,
         s12w4SteelGreyItalic,
         s16w4GreyBlur,
+        s12w5Primary,
       ]);
 }

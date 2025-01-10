@@ -17,4 +17,16 @@ class OneIcons {
   static const String ic_calendar_current = 'assets/icons/ic_calendar_current.svg';
   static const String ic_co2_current = 'assets/icons/ic_co2_current.svg';
   static const String ic_profile_current = 'assets/icons/ic_profile_current.svg';
+
+  static const String ic_connect_location = 'assets/icons/ic_connect_location.svg';
+  static const String ic_plane = 'assets/icons/ic_plane.svg';
+  static const String ic_tree = 'assets/icons/ic_tree.svg';
+  static const String ic_co2_tab = 'assets/icons/ic_co2_tab.svg';
+  static const String ic_car = 'assets/icons/ic_car.svg';
+
+  static const String ic_car_blue = 'assets/icons/ic_car_blue.svg';
+  static const String ic_foot = 'assets/icons/ic_foot.svg';
+  static const String ic_location = 'assets/icons/ic_location.svg';
+  static const String ic_statistical = 'assets/icons/ic_statistical.svg';
+  static const String ic_plane_vehicle = 'assets/icons/ic_plane_vehicle.svg';
 }

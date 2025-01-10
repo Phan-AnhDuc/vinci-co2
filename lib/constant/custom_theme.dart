@@ -13,7 +13,7 @@ class CustomTheme {
     theme.appTheme = ThemeData(
       primaryColor: OneColors.brandVNP,
       scaffoldBackgroundColor: Colors.white,
-      fontFamily: 'OLInter',
+      fontFamily: 'MGManrope',
       textTheme: TextTheme(
         bodyText2: OneTheme.of(context).body2,
       ),

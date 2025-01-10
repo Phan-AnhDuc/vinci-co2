@@ -7,6 +7,7 @@ class OneColors {
   static const error = Color(0xFFF2323F);
   //Text Colors
   static const Color textGrey1 = Color(0xFF9E9E9E);
+  static const Color greyBlue = Color(0xFF214784);
   static const Color textGrey2 = Color(0xFF6D6D6D);
   static const Color textGrey3 = Color(0xFF454545);
   static const Color textGreyDark = Color(0xFF050505);
@@ -40,11 +41,11 @@ class OneColors {
   static const Color primaryDarkBlue = Color(0xFF0961B6);
   static const Color primaryLightBlue = Color(0xFF2686E0);
   static const Color greenBlur = Color(0xFFD4F9EC);
-  static const Color greenLight = Color(0xFF0E7C12);
+  static const Color greenLight = Color(0xFFD4F6FF);
   static const Color greenSteel = Color(0xFF19C285);
   static const Color yellowSteel = Color(0xFFFF9E2B);
   static const Color greenNavy = Color(0xFF21C8B4);
-  static const Color yellowLight = Color(0xFFFFC800);
+  static const Color yellowLight = Color(0xFFFFF0D9);
   static const Color blueBlur = Color(0xFF0079FA);
   static const Color pink = Color(0xFFF7A2A2);
   static const Color cyan = Color(0xFF00CFE5);
