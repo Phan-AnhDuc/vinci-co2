@@ -1,5 +1,5 @@
-import 'package:basegetxbloc/constant/one_colors.dart';
-import 'package:basegetxbloc/constant/one_theme.dart';
+import 'package:MoveGreen/constant/one_colors.dart';
+import 'package:MoveGreen/constant/one_theme.dart';
 import 'package:flutter/material.dart';
 
 class CustomTheme {

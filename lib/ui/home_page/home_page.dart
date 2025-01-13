@@ -1,8 +1,9 @@
+import 'package:MoveGreen/ui/profile/view/profile_screen.dart';
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
-import 'package:basegetxbloc/constant/one_colors.dart';
-import 'package:basegetxbloc/constant/one_icons.dart';
-import 'package:basegetxbloc/constant/one_theme.dart';
-import 'package:basegetxbloc/ui/home_screen/home_screen.dart';
+import 'package:MoveGreen/constant/one_colors.dart';
+import 'package:MoveGreen/constant/one_icons.dart';
+import 'package:MoveGreen/constant/one_theme.dart';
+import 'package:MoveGreen/ui/home_screen/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -36,7 +37,7 @@ class _HomePageState extends State<HomePage> {
     const HomeScreen(),
     const SizedBox(),
     const SizedBox(),
-    const SizedBox(),
+    const ProfileScreen(),
   ];
 
   @override

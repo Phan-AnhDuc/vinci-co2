@@ -2,11 +2,11 @@
 
 import 'dart:async';
 
-import 'package:basegetxbloc/component/textfield/shake_widget.dart';
-import 'package:basegetxbloc/constant/one_colors.dart';
-import 'package:basegetxbloc/constant/one_icons.dart';
-import 'package:basegetxbloc/constant/one_theme.dart';
-import 'package:basegetxbloc/shared/constant.dart';
+import 'package:MoveGreen/component/textfield/shake_widget.dart';
+import 'package:MoveGreen/constant/one_colors.dart';
+import 'package:MoveGreen/constant/one_icons.dart';
+import 'package:MoveGreen/constant/one_theme.dart';
+import 'package:MoveGreen/shared/constant.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';

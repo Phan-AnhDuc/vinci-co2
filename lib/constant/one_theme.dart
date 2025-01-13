@@ -1,13 +1,4 @@
-/*
- * File: one_theme.dart
- * File Created: Friday, 8th January 2021 12:50:44 pm
- * Author: Hieu Tran
- * -----
- * Last Modified: Friday, 8th January 2021 12:52:32 pm
- * Modified By: Hieu Tran
- */
-
-import 'package:basegetxbloc/constant/one_theme_data.dart';
+import 'package:MoveGreen/constant/one_theme_data.dart';
 import 'package:flutter/material.dart';
 
 class OneTheme extends StatelessWidget {

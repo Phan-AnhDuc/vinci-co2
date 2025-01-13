@@ -1,4 +1,4 @@
-package com.example.basegetxbloc
+package com.deepcare.MoveGreen
 
 import io.flutter.embedding.android.FlutterActivity
 

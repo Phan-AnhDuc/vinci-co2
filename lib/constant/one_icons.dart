@@ -29,4 +29,7 @@ class OneIcons {
   static const String ic_location = 'assets/icons/ic_location.svg';
   static const String ic_statistical = 'assets/icons/ic_statistical.svg';
   static const String ic_plane_vehicle = 'assets/icons/ic_plane_vehicle.svg';
+
+  static const String ic_microsoft_id = 'assets/icons/ic_microsoft_id.svg';
+  static const String ic_vinci_loading = 'assets/icons/ic_vinci_loading.svg';
 }

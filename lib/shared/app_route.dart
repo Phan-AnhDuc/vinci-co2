@@ -1,9 +1,12 @@
 // ignore_for_file: constant_identifier_names
 
-import 'package:basegetxbloc/shared/page_material_route.dart';
-import 'package:basegetxbloc/ui/home_page/home_page.dart';
-import 'package:basegetxbloc/ui/login/login_screen.dart';
-import 'package:basegetxbloc/ui/splash/splash_screen.dart';
+import 'package:MoveGreen/shared/page_material_route.dart';
+import 'package:MoveGreen/ui/home_page/home_page.dart';
+import 'package:MoveGreen/ui/login/bindings/login_bindings.dart';
+import 'package:MoveGreen/ui/login/views/login_screen.dart';
+import 'package:MoveGreen/ui/profile/binddings/profile_binddings.dart';
+import 'package:MoveGreen/ui/profile/view/profile_screen.dart';
+import 'package:MoveGreen/ui/splash/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -11,6 +14,7 @@ enum AppRoute {
   SPALSH_SCREEN,
   LOGIN_SCREEN,
   HOME_PAGE,
+  PROFILE_SCREEN,
 }
 
 extension AppRouteExt on AppRoute {
@@ -22,6 +26,8 @@ extension AppRouteExt on AppRoute {
         return '/login_screen';
       case AppRoute.HOME_PAGE:
         return '/home_page';
+      case AppRoute.PROFILE_SCREEN:
+        return '/proflie_screen';
     }
   }
 
@@ -47,14 +53,25 @@ extension AppRouteExt on AppRoute {
         return PageMaterialRoute(
           settings: settings,
           page: () => const LoginScreen(),
-          bindings: [],
+          bindings: [LoginBinding()],
           transition: Transition.fade,
         );
       case AppRoute.HOME_PAGE:
         return PageMaterialRoute(
           settings: settings,
           page: () => const HomePage(),
-          bindings: [],
+          bindings: [
+            LoginBinding(),
+            ProfileBinding(),
+          ],
+          transition: Transition.fade,
+        );
+
+      case AppRoute.PROFILE_SCREEN:
+        return PageMaterialRoute(
+          settings: settings,
+          page: () => const ProfileScreen(),
+          bindings: [ProfileBinding()],
           transition: Transition.fade,
         );
 

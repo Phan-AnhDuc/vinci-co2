@@ -1,4 +1,4 @@
-import 'package:basegetxbloc/services/shared_preferences_manager.dart';
+import 'package:MoveGreen/services/shared_preferences_manager.dart';
 import 'package:dio/dio.dart';
 import 'package:logger/logger.dart';
 

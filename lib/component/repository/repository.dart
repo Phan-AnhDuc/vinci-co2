@@ -1,6 +1,6 @@
-import 'package:basegetxbloc/constant/end_points.dart';
-import 'package:basegetxbloc/model/api_response.dart';
-import 'package:basegetxbloc/services/dio_client.dart';
+import 'package:MoveGreen/constant/end_points.dart';
+import 'package:MoveGreen/model/api_response.dart';
+import 'package:MoveGreen/services/dio_client.dart';
 import 'package:dio/dio.dart';
 import 'package:retrofit/retrofit.dart';
 
@@ -18,6 +18,9 @@ class Api {
 abstract class RestClientApi {
   factory RestClientApi(Dio dio, {String baseUrl}) = _RestClientApi;
 
-  @GET(Endpoints.getUserByPhone)
-  Future<ApiResponse> testBase(@Queries() Map<String, dynamic> body);
+  @POST(Endpoints.login)
+  Future<ApiResponse> login(@Body() Map<String, dynamic> body);
+
+  @GET(Endpoints.me)
+  Future<ApiResponse> getMe();
 }

@@ -1,12 +1,3 @@
-/*
- * File: one_textfield_controller.dart
- * File Created: Tuesday, 9th March 2021 9:46:54 pm
- * Author: Hieu Tran
- * -----
- * Last Modified: Tuesday, 9th March 2021 9:55:56 pm
- * Modified By: Hieu Tran
- */
-
 part of 'one_textfield.dart';
 
 class OneTextFieldController extends ValueNotifier<OneTextFieldValue> {

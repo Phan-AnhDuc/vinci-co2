@@ -1,7 +1,7 @@
-import 'package:basegetxbloc/constant/one_colors.dart';
-import 'package:basegetxbloc/constant/one_icons.dart';
-import 'package:basegetxbloc/constant/one_images.dart';
-import 'package:basegetxbloc/shared/app_route.dart';
+import 'package:MoveGreen/constant/one_colors.dart';
+import 'package:MoveGreen/constant/one_icons.dart';
+import 'package:MoveGreen/constant/one_images.dart';
+import 'package:MoveGreen/shared/app_route.dart';
 import 'package:flutter/material.dart';
 
 import 'package:flutter_svg/flutter_svg.dart';
@@ -35,6 +35,7 @@ class _SplashScreenState extends State<SplashScreen> {
     return Image.asset(
       OneImages.img_splash,
       width: MediaQuery.of(context).size.width,
+      height: MediaQuery.of(context).size.height,
       fit: BoxFit.cover,
     );
   }
@@ -61,12 +62,12 @@ class _SplashScreenState extends State<SplashScreen> {
         ),
         padding: const EdgeInsets.all(20),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start, // Căn trái các text
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             const Padding(
-              padding: EdgeInsets.only(top: 37, bottom: 7),
+              padding: EdgeInsets.only(top: 33, bottom: 7),
               child: Text(
-                'Track and optimize your carb footprint',
+                'GreenMove',
                 style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
@@ -76,11 +77,12 @@ class _SplashScreenState extends State<SplashScreen> {
             ),
             const SizedBox(height: 10),
             Text(
-              'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
+              'Outil digital pour mesurer et optimiser l’empreinte carbone de la mobilité',
               style: TextStyle(
                 fontSize: 14,
                 color: Colors.white.withOpacity(0.8),
               ),
+              textAlign: TextAlign.center,
             ),
             const SizedBox(height: 49),
             Stack(
@@ -108,7 +110,7 @@ class _SplashScreenState extends State<SplashScreen> {
                   right: 6,
                   child: InkWell(
                     onTap: () {
-                      Get.offAllNamed(AppRoute.HOME_PAGE.name);
+                      Get.offAllNamed(AppRoute.LOGIN_SCREEN.name);
                     },
                     child: Container(
                       padding: const EdgeInsets.all(14),

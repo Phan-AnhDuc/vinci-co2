@@ -10,9 +10,9 @@
  */
 
 import 'package:auto_size_text/auto_size_text.dart';
-import 'package:basegetxbloc/component/button/one_button_style.dart';
-import 'package:basegetxbloc/constant/one_colors.dart';
-import 'package:basegetxbloc/shared/constant.dart';
+import 'package:MoveGreen/component/button/one_button_style.dart';
+import 'package:MoveGreen/constant/one_colors.dart';
+import 'package:MoveGreen/shared/constant.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -223,7 +223,7 @@ class _OneButtonState extends State<OneButton> {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         if (widget.prefixIconAssetPath != null) ...[
-          SvgPicture.asset(widget.prefixIconAssetPath!, color: _textColor, width: 16.0, height: 16.0, cacheColorFilter: true),
+          SvgPicture.asset(widget.prefixIconAssetPath!, width: 30, height: 30, cacheColorFilter: true),
           const SizedBox(width: 5.0),
         ],
         Flexible(

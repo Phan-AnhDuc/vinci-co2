@@ -1,7 +1,7 @@
 // ignore_for_file: slash_for_doc_comments
 
-import 'package:basegetxbloc/constant/app_keys.dart';
-import 'package:basegetxbloc/shared/shared_preferences_utils.dart';
+import 'package:MoveGreen/constant/app_keys.dart';
+import 'package:MoveGreen/shared/shared_preferences_utils.dart';
 
 class SharedPrefManager {
   SharedPrefManager._();

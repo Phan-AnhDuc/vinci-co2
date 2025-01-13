@@ -13,7 +13,7 @@ class _RestClientApi implements RestClientApi {
     this._dio, {
     this.baseUrl,
   }) {
-    baseUrl ??= 'https://gateway.h247.com.vn/mobicare/api/v1/';
+    baseUrl ??= 'https://movegreen.datcv.io.vn/api/';
   }
 
   final Dio _dio;
@@ -21,10 +21,40 @@ class _RestClientApi implements RestClientApi {
   String? baseUrl;
 
   @override
-  Future<ApiResponse<dynamic>> testBase(Map<String, dynamic> body) async {
+  Future<ApiResponse<dynamic>> login(Map<String, dynamic> body) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
-    queryParameters.addAll(body);
+    final _headers = <String, dynamic>{};
+    final _data = <String, dynamic>{};
+    _data.addAll(body);
+    final _result = await _dio.fetch<Map<String, dynamic>>(
+        _setStreamType<ApiResponse<dynamic>>(Options(
+      method: 'POST',
+      headers: _headers,
+      extra: _extra,
+    )
+            .compose(
+              _dio.options,
+              'login',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
+    final value = ApiResponse<dynamic>.fromJson(
+      _result.data!,
+      (json) => json as dynamic,
+    );
+    return value;
+  }
+
+  @override
+  Future<ApiResponse<dynamic>> getMe() async {
+    const _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final Map<String, dynamic>? _data = null;
     final _result = await _dio.fetch<Map<String, dynamic>>(
@@ -35,7 +65,7 @@ class _RestClientApi implements RestClientApi {
     )
             .compose(
               _dio.options,
-              'auth',
+              'user/me',
               queryParameters: queryParameters,
               data: _data,
             )

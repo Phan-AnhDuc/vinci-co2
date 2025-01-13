@@ -1,9 +1,9 @@
-import 'package:basegetxbloc/component/item_gridview.dart';
-import 'package:basegetxbloc/component/item_work_schedule.dart';
-import 'package:basegetxbloc/constant/one_colors.dart';
-import 'package:basegetxbloc/constant/one_icons.dart';
-import 'package:basegetxbloc/constant/one_images.dart';
-import 'package:basegetxbloc/constant/one_theme.dart';
+import 'package:MoveGreen/component/item_gridview.dart';
+import 'package:MoveGreen/component/item_work_schedule.dart';
+import 'package:MoveGreen/constant/one_colors.dart';
+import 'package:MoveGreen/constant/one_icons.dart';
+import 'package:MoveGreen/constant/one_images.dart';
+import 'package:MoveGreen/constant/one_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
