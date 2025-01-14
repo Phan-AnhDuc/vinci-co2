@@ -1,7 +1,9 @@
 import 'package:MoveGreen/constant/one_colors.dart';
+import 'package:MoveGreen/constant/one_icons.dart';
 import 'package:MoveGreen/constant/one_theme.dart';
 import 'package:MoveGreen/ui/profile/controllers/proflie_controllers.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 
 class ProfileScreen extends GetView<ProfileController> {
@@ -23,9 +25,9 @@ class ProfileScreen extends GetView<ProfileController> {
                   controller.getMe();
                 },
                 child: Container(
-                  height: 50,
-                  width: 50,
-                  color: OneColors.bHA,
+                  height: 115,
+                  width: 115,
+                  decoration: const BoxDecoration(shape: BoxShape.circle, color: OneColors.bHC),
                 ),
               ),
               const SizedBox(height: 10),
@@ -65,23 +67,31 @@ class ProfileScreen extends GetView<ProfileController> {
         color: OneColors.buttonBlue,
         borderRadius: BorderRadius.circular(20),
       ),
-      child: const Column(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Icon(
-            Icons.cloud, // CO2 icon
-            color: Colors.white,
-            size: 40,
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Container(
+                padding: const EdgeInsets.all(5),
+                decoration: const BoxDecoration(color: OneColors.white, shape: BoxShape.circle),
+                child: SvgPicture.asset(OneIcons.ic_co2_current),
+              ),
+              const SizedBox(width: 10),
+              const Text(
+                'Total CO2',
+                style: TextStyle(
+                  fontSize: 16,
+                  color: Colors.white,
+                ),
+              ),
+            ],
           ),
-          SizedBox(height: 10),
-          Text(
-            'Total CO2',
-            style: TextStyle(
-              fontSize: 16,
-              color: Colors.white,
-            ),
-          ),
-          SizedBox(height: 10),
-          Text(
+          const SizedBox(height: 10),
+          const Text(
             '0.92 tons CO2e',
             style: TextStyle(
               fontSize: 24,
@@ -89,7 +99,7 @@ class ProfileScreen extends GetView<ProfileController> {
               color: Colors.white,
             ),
           ),
-          Text(
+          const Text(
             '0.33 CO2/km',
             style: TextStyle(
               fontSize: 14,

@@ -2,19 +2,15 @@ import 'package:MoveGreen/constant/one_colors.dart';
 import 'package:MoveGreen/constant/one_icons.dart';
 import 'package:MoveGreen/constant/one_images.dart';
 import 'package:MoveGreen/shared/app_route.dart';
+import 'package:MoveGreen/ui/splash/controllers/splash_controllers.dart';
 import 'package:flutter/material.dart';
 
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 
-class SplashScreen extends StatefulWidget {
+class SplashScreen extends GetView<SplashController> {
   const SplashScreen({super.key});
 
-  @override
-  State<SplashScreen> createState() => _SplashScreenState();
-}
-
-class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -110,7 +106,7 @@ class _SplashScreenState extends State<SplashScreen> {
                   right: 6,
                   child: InkWell(
                     onTap: () {
-                      Get.offAllNamed(AppRoute.LOGIN_SCREEN.name);
+                      Get.offAllNamed(AppRoute.BACKGROUND_SCREEN.name);
                     },
                     child: Container(
                       padding: const EdgeInsets.all(14),

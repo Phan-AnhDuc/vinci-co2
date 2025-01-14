@@ -41,7 +41,7 @@ class _HomeScreenState extends State<HomeScreen> {
             slivers: [
               SliverAppBar(
                 pinned: true,
-                backgroundColor: OneColors.white,
+                surfaceTintColor: OneColors.white,
                 flexibleSpace: Padding(
                   padding: const EdgeInsets.only(left: 20, top: 8, bottom: 8, right: 20),
                   child: Row(
